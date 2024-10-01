@@ -59,10 +59,7 @@ TEMPLATES = [
 STATIC_URL = '/static/'
 
 # Define the path to static files
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # WSGI application
 WSGI_APPLICATION = 'inside_light.wsgi.application'
@@ -89,8 +86,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files configuration
-STATIC_URL = 'static/'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

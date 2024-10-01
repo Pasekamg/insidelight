@@ -5,5 +5,5 @@ def music_list(request):
     return render(request, 'music/music_list.html', {})
 # music/views.py
 
-def home(request):
-    return render(request, 'music/home.html')  # Make sure 'music/home.html' template exists
+def index(request):
+    return render(request, 'music/index.html')  # Make sure 'music/index.html' template exists
