@@ -1,58 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Inside Light - Parallax & Animations</title>
-    <link rel="stylesheet" href="static/css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insight Inside Light</title>
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <!-- Header -->
-    <header class="main-header">
-        <h1>Insight Inside Light</h1>
-        <nav class="main-nav">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="https://pasekamg.github.io/eternal-weight-of-glory/" target="_blank">Music</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Header and Navbar Styles */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+      }
+
+      .header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li {
+        list-style: none;
+      }
+
+      nav ul li a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.3rem;
+        padding: 5px 10px;
+        transition: background-color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        background-color: #e2ff5f;
+        border-radius: 5px;
+      }
+
+      /* Mobile Hamburger Menu */
+      .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+          color: white;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          background-color: rgba(0, 0, 0, 0.9);
+          width: 100%;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          padding: 15px;
+        }
+
+        nav ul.active {
+          display: flex;
+        }
+
+        nav ul li {
+          text-align: center;
+          margin: 10px 0;
+        }
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 100vh;
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url('static/images/hero-background.jpg') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        background-color: #151e33;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        border-radius: 50px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #ccfe7b;
+        transform: scale(1.1);
+      }
+
+      /* Main Content Sections */
+      section {
+        padding: 100px 20px;
+        min-height: 100vh;
+      }
+
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      section p {
+        text-align: center;
+        font-size: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto 40px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .grid-item {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Footer */
+      .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .footer a {
+        color: #d4ff5f;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <h1>Insight Inside Light</h1>
+      <nav>
+        <div class="menu-toggle">☰</div>
+        <ul>
+          <li><a href="#home">Journey Begins</a></li>
+          <li><a href="#about">Our Light Story</a></li>
+          <li><a href="#music">Melodies of Insight</a></li>
+          <li><a href="#contact">Connect with Light</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Parallax Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="scroll-animation">Shine Your Light</h1>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div>
+        <h1>Discover the Light Within</h1>
+        <p>Start your journey of inspiration, discovery, and illumination.</p>
+        <a href="#about" class="btn">Learn More</a>
+      </div>
     </section>
 
-    <!-- Main Content -->
-    <section class="content-section">
-        <div class="content-box scroll-animation">
-            <h3>Our Treasure Trove</h3>
-            <p>Ride through this relaxed, empowering trip in this treasure trove and capture the essence of eternal life displayed.</p>
-            <a href="https://pasekamg.github.io/eternal-weight-of-glory/" class="btn" target="_blank">Ride On</a>
+    <!-- About Section -->
+    <section id="about">
+      <h2>Our Light Story</h2>
+      <p>
+        At Insight Inside Light, we combine light and sound to guide you on a journey of inspiration and self-discovery.
+      </p>
+      <div class="grid">
+        <div class="grid-item">
+          <h3>Our Treasure Troove</h3>
+          <p>
+            Learn about our mission to inspire people through the combination of light, sound, and creative expression.
+          </p>
+          <a href="https://pasekamg.github.io/eternal-weight-of-glory/" class="btn" target="_blank">Dive In</a>
         </div>
-        <div class="content-box scroll-animation">
-            <h3>Community Stories</h3>
-            <p>Read heartwarming stories from our community, sharing their journey of hope and light.</p>
-            <a href="https://kingschat.online/user/loveatff" class="btn" target="_blank">Discover More</a>
+        <div class="grid-item">
+          <h3>King's Street</h3>
+          <p>
+            Some say wealthy people discuss ideas, come to kingschart and see what gods talk about.
+          </p>
+          <a href="https://kingschat.online/user/pasekachristt" class="btn" target="_blank">Dive In</a>
         </div>
-        <div class="content-box scroll-animation">
-            <h3>Join Us</h3>
-            <p>Be a part of our vibrant community. Join us in spreading positivity and light.</p>
-            <a href="https://chat.whatsapp.com/J2y7ZxW6Eg52pX9SAZfcu0" class="btn" target="_blank">Join Now</a>
+        <div class="grid-item">
+          <h3>Our Community</h3>
+          <p>
+            Become a part of a community that shares positivity and light through stories, music, and conversation.
+          </p>
+          <a href="https://chat.whatsapp.com/J2y7ZxW6Eg52pX9SAZfcu0" class="btn" target="_blank">Plug</a>
+          <a href="https://kingschat.online/user/blw.lighthouse" class="btn" target="_blank">Plug 2</a>
+          
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Music Section -->
+    <section id="music">
+      <h2>Melodies of Insight</h2>
+      <p>
+        Dive into our collection of music designed to inspire, uplift, and guide your journey.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Connect with Light</h2>
+      <p>
+        Reach out and connect with us. We're here to inspire and guide you every step of the way.
+      </p>
+      <a href="https://app.rhapsodyofrealities.org/officialsite" class="btn" target="_blank">Connect on Rhapsody</a>
+    </section>
+
+    <!-- Footer Section -->
     <footer class="footer">
-        <p>&copy; 2024 Inside Light. All rights reserved.</p>
+      <p>&copy; 2024 Insight Inside Light. All Rights Reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
 
-    <!-- JavaScript for Scroll Animations -->
-    <script src="static/js/scripts.js"></script>
-
-</body>
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+      document.querySelector('.menu-toggle').addEventListener('click', function () {
+        document.querySelector('nav ul').classList.toggle('active');
+      });
+    </script>
+  </body>
 </html>
