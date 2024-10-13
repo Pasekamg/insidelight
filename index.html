@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,205 +6,267 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insight Inside Light</title>
     <link rel="stylesheet" href="static/css/styles.css" />
+
     <style>
-      /* General Reset */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        line-height: 1.6;
-      }
-
-      /* Smooth Scrolling */
-      html {
-        scroll-behavior: smooth;
-      }
-
-      /* Header and Navbar Styles */
-      .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        z-index: 999;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-      }
-
-      .header h1 {
-        font-size: 1.8rem;
-      }
-
-      nav ul {
-        display: flex;
-        gap: 20px;
-      }
-
-      nav ul li {
-        list-style: none;
-      }
-
-      nav ul li a {
-        color: white;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 1.3rem;
-        padding: 5px 10px;
-        transition: background-color 0.3s ease;
-      }
-
-      nav ul li a:hover {
-        background-color: #e2ff5f;
-        border-radius: 5px;
-      }
-
-      /* Mobile Hamburger Menu */
-      .menu-toggle {
-        display: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-
-      @media (max-width: 768px) {
-        .menu-toggle {
-          display: block;
-          color: white;
-        }
-
-        nav ul {
-          display: none;
-          flex-direction: column;
-          background-color: rgba(0, 0, 0, 0.9);
-          width: 100%;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          padding: 15px;
-        }
-
-        nav ul.active {
-          display: flex;
-        }
-
-        nav ul li {
-          text-align: center;
-          margin: 10px 0;
-        }
-      }
-
-      /* Hero Section */
-      .hero {
-        height: 100vh;
-        background: linear-gradient(
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)
-          ),
-          url('static/images/alived.webp') no-repeat center center/cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-align: center;
-        padding: 0 20px;
-      }
-
-      .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-      }
-
-      .hero p {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
-      }
-
-      .btn {
-        background-color: #151e33;
-        color: white;
-        padding: 15px 30px;
-        text-decoration: none;
-        font-size: 1.5rem;
-        border-radius: 50px;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-      }
-
-      .btn:hover {
-        background-color: #324514;
-        transform: scale(1.1);
-      }
-
-      /* Main Content Sections */
-      section {
-        padding: 100px 20px;
-        min-height: 100vh;
-      }
-
-      section h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        text-align: center;
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('static/images/blue water.webp');
+    color: #343d07;
+    line-height: 1.6;
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Header and Navbar Styles */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('static/images/water.webp');
+    color: white;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-image: url('static/images/nations.webp');
+    border-radius: 5px;
+  }
+  
+  /* Mobile Hamburger Menu */
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      color: white;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 15px;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+  
+    nav ul li {
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url('static/images/sarene.webp') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    background-color: #0c1733be;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #36024d;
+    transform: scale(1.1);
+  }
+  
+  /* Main Content Sections */
+  section {
+    padding: 100px 20px;
+    min-height: 100vh;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
     background-image: url('static/images/wing.webp');
     background-size: cover;
     background-position: center;
+  }
+  
+  section p {
+    text-align: center;
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .grid-item {
+    background-image: url('static/images/sarene.webp');
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Footer */
+  .footer {
+    background-image: url('static/images/nations.webp');
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .footer a {
+    color: #d4ff5f;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Music Player Section Styles */
+ 
+  
+  .player-container {
+    background-image: url('static/images/water.webp');
+    padding: 30px; /* Increased padding */
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 
-      }
+.player-container:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
+}
 
-      section p {
-        text-align: center;
-        font-size: 1.5rem;
-        max-width: 800px;
-        margin: 0 auto 40px;
-      }
+.player-container h2 {
+    font-size: 2rem;
+    color: #f5f5f5;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    padding-bottom: 15px; /* Padding for spacing under the heading */
+}
 
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 20px;
-      }
 
-      .grid-item {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
+.player-container p {
+    font-size: 1.2rem;
+    color: #aaa; /* Light grey for the text */
+    margin-bottom: 20px;
+}
 
-      @media (max-width: 768px) {
-        .grid {
-          grid-template-columns: 1fr;
-        }
-      }
+audio {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 8px; /* Rounded corners for the audio player */
+    border: 2px solid #333; /* Border around the audio element */
+}
 
-      /* Footer */
-      .footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 30px 20px;
-      }
+audio::-webkit-media-controls-panel {
+  background-image: url('static/images/nations.webp'); /* Darker background for controls */
+    border-radius: 8px; /* Rounded corners */
+}
 
-      .footer a {
-        color: #d4ff5f;
-        text-decoration: none;
-      }
+@media (max-width: 768px) {
+    .player-container {
+        padding: 15px;
+    }
 
-      .footer a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    .player-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .player-container p {
+        font-size: 1rem;
+    }
+}
+
+ 
+  </style>
+  
   </head>
   <body>
     <!-- Header Section -->
@@ -225,7 +288,7 @@
       <div>
         <h1>Discover the Light Within</h1>
         <p>Start your journey of inspiration, transformation, and illumination.</p>
-        <a href="#about" class="btn">Come And See</a>
+        <a href="#about" class="btn">Come in And see</a>
       </div>
     </section>
 
@@ -298,31 +361,14 @@ By Your mighty name, oh LORD.
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>My Website</title>
-      <style>
-          /* Add the player styling to your existing styles */
-          .player-container {
-              background-color: #fff;
-              padding: 20px;
-              border-radius: 8px;
-              box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-              text-align: center;
-              margin-top: 20px;
-          }
-          h2 {
-              margin-bottom: 10px;
-          }
-          audio {
-              width: 100%;
-              margin-top: 10px;
-          }
-      </style>
+     
   </head>
-  <body>
+  
   
       <!-- Other content on your page -->
     
       <p>Should we blame Joseph for the 400 years of slavery in Egypt or Abraham in genesis 15 the dark cloud that overwhelmed him. The story of our nations are already known to our LORD and therefore we already overcame as He said in all this things we are more than conquerors:</p>
-  
+      <body>
       <!-- Adding the music player here -->
       <div class="player-container">
         <h2>Enjoy these Flieds with us</h2>
@@ -333,7 +379,7 @@ By Your mighty name, oh LORD.
         </audio>
         
         <audio controls>
-            <source src="inside_light/songs/WhatsApp Audio 2024-09-10 at 08.48.42_c1b56b7c.opus" type="audio/mpeg">
+            <source src="inside_light/songs/WhatsApp Audio 2024-10-08 at 19.57.41_00913d3a.waptt.opus" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         
@@ -341,6 +387,12 @@ By Your mighty name, oh LORD.
             <source src="inside_light/songs/WhatsApp Audio 2024-09-14 at 20.11.56_f757bc07.opus" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
+
+        <audio controls>
+          <source src="inside_light/songs/Recording.m4a" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+
     </div>
     
   
@@ -350,7 +402,7 @@ By Your mighty name, oh LORD.
 
     <!-- Footer Section -->
     <footer class="footer">
-      <p>&copy; 2024 kaino's Light. All Rights Reserved.</p>
+      <p>&copy; 2024 kainos Light. All Rights Reserved.</p>
       <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
 
