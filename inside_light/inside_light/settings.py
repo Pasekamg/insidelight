@@ -21,7 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'music',  # Your app
+    'music',
+    'inside_light',
 ]
 
 # Middleware
@@ -42,7 +43,7 @@ ROOT_URLCONF = 'inside_light.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'music', 'templates')],
+        'DIRS': [BASE_DIR / 'templates'],  # Make sure this is the correct path
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -54,6 +55,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
